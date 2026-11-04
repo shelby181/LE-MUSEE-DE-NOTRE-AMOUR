@@ -1,5 +1,5 @@
-Pour toi mon amour ❤🫂
-<!DOCTYPE html>
+*Pour toi mon amour ❤🫂*
+
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
