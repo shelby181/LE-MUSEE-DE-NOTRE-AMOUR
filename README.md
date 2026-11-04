@@ -3,395 +3,209 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Le Musée de Notre Amour ❤️</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500&display=swap');
-
-:root {
- --gold:#d6b477;
- --cream:#f4e9d6;
- --dark:#100c0b;
- --card:#211815;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-*{margin:0;padding:0;box-sizing:border-box}
-
-html{scroll-behavior:smooth}
-
-body{
- background:var(--dark);
- color:var(--cream);
- font-family:'Poppins',sans-serif;
- overflow-x:hidden;
+body {
+    background: #160d18;
+    color: #f8e9df;
+    font-family: Georgia, serif;
+    text-align: center;
 }
 
-body::before{
- content:"";
- position:fixed;
- inset:0;
- background:radial-gradient(circle at 50% 20%,#49302055,transparent 60%);
- pointer-events:none;
- z-index:-1;
+header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background: linear-gradient(#160d18dd, #160d18ee),
+    url("https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1200");
+    background-size: cover;
+    background-position: center;
 }
 
-header{
- min-height:100vh;
- display:flex;
- flex-direction:column;
- justify-content:center;
- align-items:center;
- padding:30px 20px;
- text-align:center;
- background:
- linear-gradient(#100c0b77,#100c0b),
- url("https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1600");
- background-size:cover;
- background-position:center;
+header h1 {
+    color: #ffb6c9;
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
-.small-title{
- color:var(--gold);
- letter-spacing:5px;
- font-size:11px;
+header p {
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 500px;
 }
 
-header h1{
- font-family:'Cormorant Garamond',serif;
- font-size:clamp(45px,10vw,85px);
- color:var(--gold);
- margin:25px 0;
- animation:appear 2s ease;
+button {
+    background: #ff6b91;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-size: 15px;
+    margin: 15px;
+    cursor: pointer;
 }
 
-header p{
- max-width:500px;
- line-height:2;
- font-size:14px;
+button:hover {
+    background: #ff477e;
 }
 
-.gold-button{
- display:inline-block;
- padding:14px 28px;
- background:var(--gold);
- color:#160e09;
- border:0;
- border-radius:30px;
- text-decoration:none;
- cursor:pointer;
- margin-top:30px;
- font-family:inherit;
- transition:.3s;
+section {
+    padding: 65px 20px;
 }
 
-.gold-button:hover{
- transform:scale(1.07);
- box-shadow:0 0 25px #d6b47766;
+h2 {
+    color: #ffb6c9;
+    margin-bottom: 25px;
+    font-size: 27px;
 }
 
-nav{
- position:sticky;
- top:0;
- z-index:20;
- background:#120d0bf2;
- border-bottom:1px solid #80633b;
- padding:15px 8px;
- display:flex;
- justify-content:center;
- flex-wrap:wrap;
- gap:17px;
+.intro {
+    line-height: 1.9;
+    max-width: 650px;
+    margin: auto;
+    color: #ead6df;
 }
 
-nav a{
- color:var(--gold);
- text-decoration:none;
- font-size:11px;
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    max-width: 750px;
+    margin: auto;
 }
 
-nav a:hover{color:white}
-
-section{
- padding:85px 20px;
- text-align:center;
- scroll-margin-top:65px;
+.gallery img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #b68a69;
 }
 
-.section-label{
- color:var(--gold);
- letter-spacing:4px;
- font-size:10px;
+.timeline {
+    max-width: 600px;
+    margin: auto;
+    border-left: 2px solid #ff6b91;
+    text-align: left;
+    padding-left: 25px;
 }
 
-h2{
- font-family:'Cormorant Garamond',serif;
- color:var(--gold);
- font-size:42px;
- margin:15px 0;
+.event {
+    margin-bottom: 35px;
+    position: relative;
 }
 
-.description{
- max-width:550px;
- margin:0 auto 35px;
- line-height:1.9;
- color:#c9bba7;
- font-size:13px;
+.event::before {
+    content: "❤";
+    position: absolute;
+    left: -36px;
+    color: #ff6b91;
 }
 
-.line{
- width:65px;
- height:1px;
- background:var(--gold);
- margin:20px auto 30px;
+.event h3 {
+    color: #ffb6c9;
+    margin-bottom: 8px;
 }
 
-/* GALERIE */
-
-.gallery{
- max-width:1000px;
- margin:auto;
- display:grid;
- grid-template-columns:repeat(3,1fr);
- gap:15px;
+.event p {
+    line-height: 1.7;
 }
 
-.gallery-item{
- height:230px;
- overflow:hidden;
- border:1px solid #725735;
- cursor:pointer;
- position:relative;
- border-radius:5px;
+.card {
+    max-width: 600px;
+    margin: auto;
+    background: #29182b;
+    border: 1px solid #a77a68;
+    padding: 30px 20px;
+    border-radius: 15px;
+    line-height: 1.9;
 }
 
-.gallery-item img{
- width:100%;
- height:100%;
- object-fit:cover;
- transition:.6s;
+#letter {
+    display: none;
+    margin-top: 20px;
+    color: #ffe4ec;
+    text-align: left;
+    white-space: pre-line;
 }
 
-.gallery-item:hover img{
- transform:scale(1.12);
+.music-box {
+    max-width: 550px;
+    margin: auto;
+    background: #29182b;
+    padding: 25px;
+    border-radius: 15px;
 }
 
-.gallery-item span{
- position:absolute;
- bottom:0;
- left:0;
- width:100%;
- padding:15px 5px;
- background:linear-gradient(transparent,#000c);
- color:white;
- font-family:'Cormorant Garamond',serif;
- font-size:19px;
+iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 15px;
 }
 
-/* AGRANDIR FOTO */
-
-#lightbox{
- display:none;
- position:fixed;
- inset:0;
- z-index:100;
- background:#000e;
- justify-content:center;
- align-items:center;
- padding:20px;
+input {
+    padding: 13px;
+    width: 80%;
+    max-width: 250px;
+    border-radius: 25px;
+    border: 1px solid #ff6b91;
+    background: #160d18;
+    color: white;
+    text-align: center;
+    font-size: 16px;
 }
 
-#lightbox img{
- max-width:95%;
- max-height:85vh;
- border:2px solid var(--gold);
+#secretMessage, #finalMessage {
+    display: none;
+    margin-top: 20px;
+    line-height: 1.9;
+    color: #ffb6c9;
 }
 
-#lightbox span{
- position:absolute;
- top:20px;
- right:25px;
- font-size:35px;
- cursor:pointer;
- color:white;
+footer {
+    padding: 35px 15px;
+    background: #100810;
+    color: #d8a8b8;
+    line-height: 2;
 }
 
-/* HISTOIRE */
-
-.timeline{
- max-width:650px;
- margin:auto;
- text-align:left;
+.heart {
+    position: fixed;
+    bottom: -20px;
+    color: #ff6b91;
+    animation: float 5s linear forwards;
+    pointer-events: none;
 }
 
-.timeline-item{
- position:relative;
- border-left:1px solid var(--gold);
- padding:5px 25px 35px;
- margin-left:15px;
+@keyframes float {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
 }
 
-.timeline-item::before{
- content:"";
- position:absolute;
- left:-6px;
- top:8px;
- width:11px;
- height:11px;
- background:var(--gold);
- border-radius:50%;
-}
+@media(max-width: 400px) {
+    header h1 {
+        font-size: 29px;
+    }
 
-.timeline-item strong{
- color:var(--gold);
- font-family:'Cormorant Garamond',serif;
- font-size:23px;
-}
-
-.timeline-item p{
- color:#c9bba7;
- font-size:13px;
- line-height:1.9;
- margin-top:8px;
-}
-
-/* CARDS */
-
-.card{
- max-width:600px;
- margin:25px auto;
- background:linear-gradient(145deg,#2b2019,#17110f);
- border:1px solid #80613d;
- padding:35px 22px;
- border-radius:8px;
- box-shadow:0 10px 40px #0005;
-}
-
-.envelope{
- font-size:75px;
- cursor:pointer;
- display:inline-block;
- transition:.4s;
-}
-
-.envelope:hover{transform:scale(1.15) rotate(-8deg)}
-
-.letter-content{
- display:none;
- margin-top:25px;
- padding:25px;
- background:#f1dfbd;
- color:#3a2519;
- line-height:2;
- font-family:'Cormorant Garamond',serif;
- font-size:20px;
- text-align:left;
- animation:appear 1s;
-}
-
-/* MUSIQUE */
-
-.music-disc{
- width:115px;
- height:115px;
- margin:15px auto 25px;
- border-radius:50%;
- border:5px solid var(--gold);
- display:flex;
- align-items:center;
- justify-content:center;
- font-size:45px;
- background:radial-gradient(circle,#6a4830,#17100d);
-}
-
-.playing{
- animation:rotate 5s linear infinite;
-}
-
-audio{
- width:100%;
- max-width:350px;
- margin-top:20px;
-}
-
-/* SECRET */
-
-input{
- background:#100c0b;
- border:1px solid var(--gold);
- padding:14px;
- width:85%;
- max-width:270px;
- color:white;
- border-radius:5px;
- text-align:center;
- outline:none;
- font-size:16px;
-}
-
-#secret-result{
- display:none;
- margin-top:25px;
- color:var(--gold);
- line-height:2;
-}
-
-/* SURPRISE */
-
-#surprise-content{
- display:none;
- padding:25px 10px;
- animation:appear 1s;
-}
-
-#surprise-content h3{
- font-family:'Cormorant Garamond',serif;
- color:var(--gold);
- font-size:35px;
- margin:20px 0;
- line-height:1.4;
-}
-
-.heart{
- position:fixed;
- bottom:-30px;
- font-size:20px;
- pointer-events:none;
- animation:float 5s linear forwards;
- z-index:200;
-}
-
-footer{
- border-top:1px solid #705337;
- padding:35px 15px;
- text-align:center;
- color:#c4a779;
- font-family:'Cormorant Garamond',serif;
- font-size:19px;
-}
-
-@keyframes appear{
- from{opacity:0;transform:translateY(20px)}
- to{opacity:1;transform:translateY(0)}
-}
-
-@keyframes rotate{
- to{transform:rotate(360deg)}
-}
-
-@keyframes float{
- to{transform:translateY(-110vh) rotate(360deg);opacity:0}
-}
-
-@media(max-width:650px){
- .gallery{grid-template-columns:repeat(2,1fr)}
- .gallery-item{height:170px}
- h2{font-size:35px}
- nav{gap:12px}
- nav a{font-size:10px}
-}
-
-@media(max-width:380px){
- .gallery{grid-template-columns:1fr}
- .gallery-item{height:230px}
+    .gallery img {
+        height: 145px;
+    }
 }
 </style>
 </head>
@@ -399,214 +213,232 @@ footer{
 <body>
 
 <header>
- <div class="small-title">COLLECTION PRIVÉE • ÉDITION SPÉCIALE</div>
+    <h1>Le Musée de Notre Amour ❤️</h1>
 
- <h1>Le Musée<br>de Notre Amour</h1>
+    <p>
+        Chaque histoire possède ses souvenirs.
+        La nôtre mérite un endroit où chaque moment
+        pourra continuer à vivre.
+    </p>
 
- <p>
- Bienvenue dans un univers où les souvenirs deviennent des œuvres d'art,
- où chaque instant possède une valeur particulière.
- </p>
-
- <a href="#galerie" class="gold-button">
- Découvrir notre musée ❤️
- </a>
+    <button onclick="document.getElementById('accueil').scrollIntoView()">
+        Entrer dans notre univers ❤️
+    </button>
 </header>
 
-<nav>
- <a href="#galerie">GALERIE</a>
- <a href="#histoire">HISTOIRE</a>
- <a href="#lettre">LETTRE</a>
- <a href="#musique">MUSIQUE</a>
- <a href="#secret">SECRET</a>
- <a href="#surprise">SURPRISE</a>
-</nav>
+<section id="accueil">
+    <h2>Bienvenue dans notre univers</h2>
 
-<!-- GALERIE -->
-
-<section id="galerie">
- <div class="section-label">COLLECTION N° 01</div>
- <h2>La Galerie des Souvenirs</h2>
- <div class="line"></div>
-
- <p class="description">
- Chaque image est une petite œuvre.
- Chaque instant mérite une place dans notre collection.
- Clique sur les photos pour les admirer.
- </p>
-
- <div class="gallery">
-
-  <div class="gallery-item" onclick="enlarge(this)">
-   <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=700" alt="Fleurs">
-   <span>Un joli commencement</span>
-  </div>
-
-  <div class="gallery-item" onclick="enlarge(this)">
-   <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=700" alt="Couple">
-   <span>La tendresse</span>
-  </div>
-
-  <div class="gallery-item" onclick="enlarge(this)">
-   <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=700" alt="Coucher de soleil">
-   <span>Nos beaux horizons</span>
-  </div>
-
-  <div class="gallery-item" onclick="enlarge(this)">
-   <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=700" alt="Fleurs">
-   <span>La beauté des détails</span>
-  </div>
-
-  <div class="gallery-item" onclick="enlarge(this)">
-   <img src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=700" alt="Nature">
-   <span>Les instants précieux</span>
-  </div>
-
-  <div class="gallery-item" onclick="enlarge(this)">
-   <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=700" alt="Paysage">
-   <span>Un monde à deux</span>
-  </div>
-
- </div>
-
- <p class="description" style="margin-top:30px">
- Ces images sont provisoires. Notre véritable collection attend vos propres photos. ❤️
- </p>
+    <p class="intro">
+        Ce petit musée n'est pas un endroit ordinaire.
+        C'est un espace rempli de souvenirs, de sentiments,
+        de moments précieux et de petites choses qui
+        rendent notre histoire unique.
+        <br><br>
+        Prends ton temps... chaque partie a quelque chose
+        à te raconter. ❤️
+    </p>
 </section>
 
-<div id="lightbox" onclick="this.style.display='none'">
- <span>×</span>
- <img id="large-image" src="" alt="Photo agrandie">
-</div>
+<section>
+    <h2>📸 Notre galerie</h2>
 
-<!-- HISTOIRE -->
+    <p class="intro">
+        Quelques images pour représenter les souvenirs
+        que nous construisons ensemble.
+    </p>
 
-<section id="histoire">
- <div class="section-label">COLLECTION N° 02</div>
- <h2>Notre Histoire</h2>
- <div class="line"></div>
+    <br>
 
- <p class="description">
- Certaines dates ne sont pas de simples chiffres.
- Elles représentent des souvenirs que le temps ne peut effacer.
- </p>
-
- <div class="timeline">
-
-  <div class="timeline-item">
-   <strong>06 Juillet 2026</strong>
-   <p>Un départ, un changement de décor et le début d'un nouveau chapitre.</p>
-  </div>
-
-  <div class="timeline-item">
-   <strong>07 Juillet 2026</strong>
-   <p>Une arrivée qui allait bientôt prendre une signification particulière.</p>
-  </div>
-
-  <div class="timeline-item">
-   <strong>10 Juillet 2026 ❤️</strong>
-   <p>Une rencontre, des regards, des paroles et le commencement d'une histoire spéciale.</p>
-  </div>
-
-  <div class="timeline-item">
-   <strong>Notre présent</strong>
-   <p>Deux personnes, des souvenirs et une histoire qui continue de s'écrire.</p>
-  </div>
-
-  <div class="timeline-item">
-   <strong>Notre avenir...</strong>
-   <p>Une page encore blanche, prête à accueillir nos prochains souvenirs.</p>
-  </div>
-
- </div>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=600" alt="Souvenir 1">
+        <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600" alt="Souvenir 2">
+        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=600" alt="Souvenir 3">
+        <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?w=600" alt="Souvenir 4">
+        <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=600" alt="Souvenir 5">
+        <img src="https://images.unsplash.com/photo-1516589091380-5d8e87df6999?w=600" alt="Souvenir 6">
+    </div>
 </section>
 
-<!-- LETTRE -->
+<section>
+    <h2>🕰️ Notre histoire</h2>
 
-<section id="lettre">
- <div class="section-label">COLLECTION N° 03</div>
- <h2>Une Lettre du Cœur</h2>
- <div class="line"></div>
+    <div class="timeline">
 
- <p class="description">
- Une enveloppe, quelques mots et beaucoup de sentiments.
- </p>
+        <div class="event">
+            <h3>6 juillet 2026</h3>
+            <p>Un départ qui allait marquer le début d'une belle histoire.</p>
+        </div>
 
- <div class="card">
-  <div class="envelope" onclick="openLetter()">💌</div>
+        <div class="event">
+            <h3>7 juillet 2026</h3>
+            <p>Une nouvelle étape, sans savoir encore tout ce que l'avenir réservait.</p>
+        </div>
 
-  <p style="color:var(--gold)">Une lettre t'attend...</p>
+        <div class="event">
+            <h3>10 juillet 2026 ❤️</h3>
+            <p>Un moment spécial, le début de souvenirs que nous n'oublierons pas.</p>
+        </div>
 
-  <button class="gold-button" onclick="openLetter()">
-   Ouvrir ma lettre
-  </button>
+        <div class="event">
+            <h3>La suite...</h3>
+            <p>Notre histoire continue de s'écrire, un jour après l'autre.</p>
+        </div>
 
-  <div class="letter-content" id="letter">
-   <p>À toi, mon cœur... ❤️</p>
-   <br>
-   <p>
-    Si j'ai créé cet endroit, c'est parce que certaines personnes
-    méritent plus qu'un simple message.
-   </p>
-   <br>
-   <p>
-    Je voulais construire un petit univers où chaque souvenir,
-    chaque sourire et chaque moment partagé auraient leur place.
-   </p>
-   <br>
-   <p>
-    Je ne sais pas tout ce que l'avenir nous réserve,
-    mais je sais que notre histoire mérite d'être vécue,
-    protégée et écrite avec sincérité.
-   </p>
-   <br>
-   <p>Avec tout mon amour. ❤️</p>
-  </div>
- </div>
+    </div>
 </section>
 
-<!-- MUSIQUE -->
+<section>
+    <h2>💌 Une lettre pour toi</h2>
 
-<section id="secret">
-<div class="music-player">
-    <h2>🎶 Notre chanson ❤️</h2>
-    <p>Une mélodie qui me fait penser à toi...</p>
+    <div class="card">
+        <p>Il y a quelque chose que j'aimerais te rappeler...</p>
 
-    <iframe
-        width="100%"
-        height="200"
-        src="https://www.youtube.com/embed/W1tzURKYFNs"
-        title="Adore You - Miley Cyrus"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-    </iframe>
-</div>
-<!-- SECRET -->
+        <button onclick="ouvrirLettre()">Ouvrir ma lettre ❤️</button>
 
-<section id="secret">
- <div class="section-label">COLLECTION N° 05</div>
- <h2>La Boîte Secrète</h2>
- <div class="line"></div>
+        <div id="letter">
+            Ma douce,
 
- <p class="description">
- Tous les visiteurs ne peuvent pas accéder à ce trésor.
- Seule la bonne combinaison ouvrira cette boîte.
- </p>
+            Je ne sais pas toujours trouver les mots parfaits,
+            mais je sais une chose : ta présence compte énormément
+            pour moi.
 
- <div class="card">
-  <div style="font-size:55px">🔐</div>
+            Je ne veux pas seulement collectionner de beaux souvenirs
+            avec toi. Je veux aussi construire quelque chose de vrai,
+            avec de la patience, du respect et beaucoup d'amour.
 
-  <p style="margin:15px 0;color:var(--gold)">
-   Entre le code secret
-  </p>
+            Merci d'être une partie de mon histoire.
 
-  <input id="secret-code" type="password" placeholder="Ton code secret">
+            Avec tout mon amour. ❤️
+        </div>
+    </div>
+</section>
 
-  <br>
+<section>
+    <h2>🎶 Notre petite mélodie</h2>
 
-  <button class="gold-button" onclick="unlock()">
-   Déverrouiller ❤️
-  </button>
+    <div class="music-box">
+        <p>Parce que certaines mélodies nous font penser
+        à des personnes particulières. ❤️</p>
 
-  <div id="secret-result">
+        <iframe
+            src="https://www.youtube.com/embed/W1tzURKYFNs"
+            title="Notre chanson"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+
+        <br>
+
+        <a href="https://youtu.be/W1tzURKYFNs"
+           target="_blank"
+           style="color:#ffb6c9;">
+           Si la vidéo ne fonctionne pas, écoute-la ici ❤️
+        </a>
+    </div>
+</section>
+
+<section>
+    <h2>🔐 Un petit secret</h2>
+
+    <p class="intro">
+        Pour découvrir le prochain message,
+        il faut trouver notre date spéciale.
+    </p>
+
+    <br>
+
+    <input type="password" id="code" placeholder="Entre le code secret">
+
+    <br>
+
+    <button onclick="verifierCode()">Déverrouiller ❤️</button>
+
+    <div id="secretMessage">
+        Bravo mon amour ! 🥰
+
+        Tu viens de découvrir un petit secret.
+        Mais le plus beau reste encore à venir...
+    </div>
+</section>
+
+<section>
+    <h2>🎁 La dernière surprise</h2>
+
+    <div class="card">
+        <p>
+            Tu es arrivée jusqu'ici...
+            Alors, il reste une dernière chose à découvrir.
+        </p>
+
+        <button onclick="surprise()">Découvrir la surprise ❤️</button>
+
+        <div id="finalMessage">
+            Si je pouvais recommencer cette histoire,
+            je voudrais encore découvrir ces petits moments
+            qui nous ont rapprochés.
+
+            Je ne promets pas une histoire parfaite,
+            mais je veux continuer à écrire la nôtre
+            avec toi.
+
+            Tu occupes une place spéciale dans mon cœur. ❤️
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>Le Musée de Notre Amour ❤️</p>
+    <p>Une histoire, deux cœurs, des souvenirs infinis.</p>
+    <p>Créé avec amour. ❤️</p>
+</footer>
+
+<script>
+
+function ouvrirLettre() {
+    const lettre = document.getElementById("letter");
+
+    if (lettre.style.display === "block") {
+        lettre.style.display = "none";
+    } else {
+        lettre.style.display = "block";
+    }
+}
+
+function verifierCode() {
+    const code = document.getElementById("code").value;
+
+    if (code === "1007") {
+        document.getElementById("secretMessage").style.display = "block";
+    } else {
+        alert("Ce n'est pas le bon code. Essaie encore ❤️");
+    }
+}
+
+function surprise() {
+    document.getElementById("finalMessage").style.display = "block";
+
+    for (let i = 0; i < 25; i++) {
+        creerCoeur();
+    }
+}
+
+function creerCoeur() {
+    const coeur = document.createElement("div");
+
+    coeur.className = "heart";
+    coeur.innerHTML = "❤";
+    coeur.style.left = Math.random() * 100 + "vw";
+    coeur.style.fontSize = (15 + Math.random() * 25) + "px";
+
+    document.body.appendChild(coeur);
+
+    setTimeout(() => {
+        coeur.remove();
+    }, 5000);
+}
+
+</script>
+
+</body>
+</html>
