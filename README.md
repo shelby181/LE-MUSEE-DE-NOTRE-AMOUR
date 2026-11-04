@@ -566,6 +566,8 @@ footer{
 </section>
 
 <!-- MUSIQUE -->
+
+<section id="secret">
 <div class="music-player">
     <h2>🎶 Notre chanson ❤️</h2>
     <p>Une mélodie qui me fait penser à toi...</p>
