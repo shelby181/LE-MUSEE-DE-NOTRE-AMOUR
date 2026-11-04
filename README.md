@@ -567,28 +567,37 @@ footer{
 
 <!-- MUSIQUE -->
 
-<section id="musique">
+<<section id="musique">
  <div class="section-label">COLLECTION N° 04</div>
- <h2>Notre Univers Musical</h2>
+ <h2>Notre Univers Musical 🎵</h2>
  <div class="line"></div>
 
  <p class="description">
- Certaines mélodies racontent ce que les mots n'arrivent pas toujours à exprimer.
+ Une mélodie spéciale pour accompagner notre histoire.
  </p>
 
  <div class="card">
-  <div class="music-disc" id="disc">🎵</div>
-  <h3 style="color:var(--gold)">Une mélodie pour nous</h3>
-  <p style="font-size:12px;color:#c9bba7;margin-top:10px">
-   Musique de démonstration — à remplacer par votre chanson.
-  </p>
+   <div style="font-size:55px">🎶</div>
 
-  <audio id="audio" controls
-   src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
-  </audio>
+   <h3 style="color:var(--gold);margin:15px">
+     Notre chanson ❤️
+   </h3>
+
+   <iframe
+     width="100%"
+     height="220"
+     src="https://www.youtube.com/embed/kAhv353OjzY"
+     title="Notre chanson"
+     frameborder="0"
+     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+     allowfullscreen>
+   </iframe>
+
+   <p style="margin-top:15px;color:#c9bba7;font-size:12px">
+     Une chanson, mille émotions... ❤️
+   </p>
  </div>
 </section>
-
 <!-- SECRET -->
 
 <section id="secret">
