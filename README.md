@@ -566,38 +566,20 @@ footer{
 </section>
 
 <!-- MUSIQUE -->
+<div class="music-player">
+    <h2>🎶 Notre chanson ❤️</h2>
+    <p>Une mélodie qui me fait penser à toi...</p>
 
-<<section id="musique">
- <div class="section-label">COLLECTION N° 04</div>
- <h2>Notre Univers Musical 🎵</h2>
- <div class="line"></div>
-
- <p class="description">
- Une mélodie spéciale pour accompagner notre histoire.
- </p>
-
- <div class="card">
-   <div style="font-size:55px">🎶</div>
-
-   <h3 style="color:var(--gold);margin:15px">
-     Notre chanson ❤️
-   </h3>
-
-   <iframe
-     width="100%"
-     height="220"
-     src="https://youtu.be/kAhv353OjzY?"
-     title="Notre chanson"
-     frameborder="0"
-     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-     allowfullscreen>
-   </iframe>
-
-   <p style="margin-top:15px;color:#c9bba7;font-size:12px">
-     Une chanson, mille émotions... ❤️
-   </p>
- </div>
-</section>
+    <iframe
+        width="100%"
+        height="200"
+        src="https://www.youtube.com/embed/W1tzURKYFNs"
+        title="Adore You - Miley Cyrus"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+    </iframe>
+</div>
 <!-- SECRET -->
 
 <section id="secret">
